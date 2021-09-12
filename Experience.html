@@ -39,7 +39,6 @@
           height: 300px;
           overflow-y: auto;
           border: 2px solid white;
-          border-right: 0;
           background-color: rgba(246,144,157, 0.5);
         }
         .giveHeight{
@@ -50,6 +49,7 @@
           color: white;
         }
         .btn-secondary, .list-group-item{
+          border-radius: 5px !important;
           color: white !important;
           width: 100%;
           background-color: #DE5D83 !important;
@@ -59,6 +59,10 @@
           filter: brightness(0.8);
           outline: none;
           box-shadow: none;
+        }
+        .resetUnderline{
+          color: white;
+          text-decoration: none;
         }
         
         #style-scrollbar::-webkit-scrollbar-track
@@ -131,9 +135,9 @@
           <div class="row">
             <div class="col-md-2">
               <div id="list-Projects" class="list-group">   
-                <a class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Project1" href="#Project1">Project 1</a>
-                <a class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Project2" href="#Project2">Project 2</a>            
-                <a class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Training1" href="#Training1">Training 1</a>
+                <a class="resetUnderline" href="#Project1"><button class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Project1">Project 1</button></a>
+                <a class="resetUnderline" href="#Project2"><button class="list-group-item list-group-item-action btn-secondary btn btn-lg"  data-bs-target="#Project2">Project 2</button></a>            
+                <a class="resetUnderline" href="#Training1"><button class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Training1">Training 1</button></a>
               </div>
             </div>
             <div class="col-md-10">
@@ -259,8 +263,8 @@
           <div class="row">
             <div class="col-md-2">
               <div id="list-Internships" class="list-group">
-                <a class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Internship1" href="#Internship1">Internship 1</a>
-                <a class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Internship2" href="#Internship2">Internship 2</a>
+                <a class="resetUnderline" href="#Internship1"><button class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Internship1">Internship 1</button></a>
+                <a class="resetUnderline" href="#Internship2"><button class="list-group-item list-group-item-action btn-secondary btn btn-lg" type="button" data-bs-target="#Internship2">Internship 2</button></a>
               </div>
             </div>
             <div class="col-md-10">
