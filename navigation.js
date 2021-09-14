@@ -62,10 +62,67 @@ window.onscroll = function() {scrollFunction()};
     }
 });*/
 
-   
 
+const submit = document.getElementById("submit");
 
+submit.addEventListener('click', validate);
 
+function validate(e) {
+  //e.preventDefault();
+
+  const firstNameField = document.getElementById("first-name");
+  const LastNameField = document.getElementById("last-name");
+  const EmailField = document.getElementById("email-address");
+  const CommentField = document.getElementById("comment");
+  let valid = true;
+
+  if (!firstNameField.value) {
+    const nameError = document.getElementById("nameError1");
+    nameError.classList.add("visible");
+    firstNameField.classList.add("invalid");
+  }
+  if (firstNameField.value){
+    const nameError = document.getElementById("nameError1");
+    nameError.classList.remove("visible");
+    firstNameField.classList.remove("invalid");
+  }
+
+  if (!LastNameField.value) {
+    const nameError = document.getElementById("nameError2");
+    nameError.classList.add("visible");
+    LastNameField.classList.add("invalid");
+  }
+  if (LastNameField.value){
+    const nameError = document.getElementById("nameError2");
+    nameError.classList.remove("visible");
+    LastNameField.classList.remove("invalid");
+  }
+
+  if (!EmailField.value) {
+    const nameError = document.getElementById("emailError");
+    nameError.classList.add("visible");
+    EmailField.classList.add("invalid");
+  }
+  if (EmailField.value){
+    const nameError = document.getElementById("emailError");
+    nameError.classList.remove("visible");
+    EmailField.classList.remove("invalid");
+  }
+
+  if (!CommentField.value) {
+    const nameError = document.getElementById("commentError");
+    nameError.classList.add("visible");
+    CommentField.classList.add("invalid");
+  }
+  if (CommentField.value){
+    const nameError = document.getElementById("commentError");
+    nameError.classList.remove("visible");
+    CommentField.classList.remove("invalid");
+  }
+
+  //return valid;
+
+}
 
 
 /*$(function($) {

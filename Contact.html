@@ -78,6 +78,19 @@
         .row>* {
           flex-shrink: 1 !important;
         }
+        #nameError1 , #nameError2 , #emailError , #commentError {
+          display: none;
+          color: #C41E3A;
+        }
+
+        #nameError1.visible , #nameError2.visible , #emailError.visible , #commentError.visible  {
+          display: block;
+        }
+
+        input.invalid , textarea.invalid{
+          border:3px solid #C41E3A;
+        }
+
     </style>
   </head>
   <body id="top">
@@ -144,17 +157,17 @@
                   <button class="btn btn-secondary" value="Submit" type="submit">Submit</button>
                 </form>-->
                 <!--  Formspree Form  -->
-                <form id="fs-frm" name="comment-form" accept-charset="utf-8" action="https://formspree.io/f/xgerpqvk" method="post">
+                <form id="fs-frm" name="comment-form" accept-charset="utf-8" action="https://formspree.io/f/mqkwnagk" method="post">
                     <div class="form-items">
-                      <label for="first-name">First Name</label><span style="color: red;">*</span>
+                      <label for="first-name">First Name</label><span style="color: red;">*</span><span role="alert" id="nameError1" aria-hidden="true"> Please enter First Name </span>
                       <input type="text" name="name" id="first-name"  required="">
                     </div>
                     <div class="form-items">
-                      <label for="last-name">Last Name</label><span style="color: red;">*</span>
+                      <label for="last-name">Last Name</label><span style="color: red;">*</span><span role="alert" id="nameError2" aria-hidden="true"> Please enter Last Name </span>
                       <input type="text" name="name" id="last-name"  required="">
                     </div>
                     <div class="form-items">
-                      <label for="email-address">Email Address</label><span style="color: red;">*</span>
+                      <label for="email-address">Email Address</label><span style="color: red;">*</span><span role="alert" id="emailError" aria-hidden="true"> Please enter Email ID </span>
                       <input type="email" name="_replyto" id="email-address" required="">
                     </div>
                     <div class="form-items">
@@ -162,11 +175,11 @@
                       <input type="telephone" name="telephone" id="telephone" >
                     </div>
                     <div class="form-items">
-                      <label for="comment">Enter Your Comments:</label><span style="color: red;">*</span>
-                      <textarea rows="6" name="comment" id="comment"  required=""></textarea>  
+                      <label for="comment">Enter Your Comments:</label><span style="color: red;">*</span><span role="alert" id="commentError" aria-hidden="true"> Please enter Comments </span>
+                      <textarea rows="6" name="comment" id="comment" required=""></textarea>  
                     </div>
                     <input type="hidden" name="_subject" id="email-subject" value="Comment Form Submission">
-                  <input class="btn btn-secondary" type="submit" value="Submit">
+                  <input class="btn btn-secondary" type="submit" value="Submit" id="submit">
                 </form>
 
               </div>
